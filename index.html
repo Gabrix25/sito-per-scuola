@@ -1,0 +1,343 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Need for Speed | Home</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #111;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        /* BARRA IN ALTO */
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 5%;
+            background: #080808;
+            border-bottom: 2px solid #e63939;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            color: #ff3030;
+            font-size: 25px;
+            font-weight: 900;
+            font-style: italic;
+            text-decoration: none;
+            letter-spacing: -1px;
+        }
+
+        .logo span {
+            display: block;
+            color: white;
+            font-size: 10px;
+            letter-spacing: 4px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            gap: 22px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: #ff3838;
+        }
+
+        /* IMMAGINE PRINCIPALE */
+
+        .hero {
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 50px 20px;
+
+            background:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.65),
+                    rgba(0, 0, 0, 0.85)
+                ),
+                url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1600&q=85")
+                center / cover no-repeat;
+        }
+
+        .hero h1 {
+            font-size: clamp(38px, 7vw, 72px);
+            font-weight: 900;
+            font-style: italic;
+            text-transform: uppercase;
+            margin: 0 0 15px;
+            text-shadow: 3px 3px 10px black;
+        }
+
+        .hero h1 span {
+            color: #ff3030;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #eee;
+            line-height: 1.7;
+            max-width: 650px;
+            margin: 0 auto 25px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 14px 25px;
+            background: #e63939;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.2s;
+        }
+
+        .button:hover {
+            background: #b91c1c;
+        }
+
+        /* TESTO INTRODUTTIVO */
+
+        .contenuto {
+            max-width: 950px;
+            margin: auto;
+            padding: 45px 25px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #ff4242;
+            font-size: 28px;
+            margin-bottom: 25px;
+        }
+
+        .contenuto p {
+            font-size: 17px;
+            line-height: 1.9;
+            color: #ddd;
+            margin-bottom: 20px;
+        }
+
+        strong {
+            color: white;
+        }
+
+        /* SCHEDE DELLE PAGINE */
+
+        .sezioni {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 25px;
+            margin-top: 35px;
+            text-align: left;
+        }
+
+        .scheda {
+            background: #202020;
+            border: 1px solid #444;
+            border-radius: 10px;
+            padding: 25px;
+            transition: border-color 0.2s,
+                        transform 0.2s;
+        }
+
+        .scheda:hover {
+            border-color: #e63939;
+            transform: translateY(-4px);
+        }
+
+        .scheda h3 {
+            color: #ff4242;
+            margin-top: 0;
+        }
+
+        .scheda p {
+            font-size: 15px;
+        }
+
+        .scheda a {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .scheda a:hover {
+            color: #ff4242;
+        }
+
+        footer {
+            background: #080808;
+            border-top: 1px solid #333;
+            padding: 25px;
+            text-align: center;
+            color: #999;
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                justify-content: center;
+            }
+
+            nav {
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .sezioni {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                min-height: 350px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- MENU PRINCIPALE -->
+
+    <header>
+
+        <a class="logo" href="index.html" aria-label="Torna alla Home">
+            NEED FOR SPEED
+            <span>RACING WORLD</span>
+        </a>
+
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="pagina2.html">AUTO E GARE</a>
+            <a href="pagina3.html">IL SUCCESSO</a>
+        </nav>
+
+    </header>
+
+    <!-- COPERTINA -->
+
+    <section class="hero">
+
+        <div>
+            <h1>NEED FOR <span>SPEED</span></h1>
+
+            <p>
+                Entra nel mondo delle corse automobilistiche,
+                delle auto sportive e della velocità.
+                Scopri una delle serie di videogiochi
+                di corse più famose al mondo.
+            </p>
+
+            <a href="pagina2.html" class="button">
+                SCOPRI LE AUTO
+            </a>
+        </div>
+
+    </section>
+
+    <!-- INTRODUZIONE -->
+
+    <main class="contenuto">
+
+        <h2>Il mondo delle corse automobilistiche</h2>
+
+        <p>
+            <strong>Need for Speed</strong>, conosciuto anche con
+            la sigla NFS, è una famosa serie di videogiochi
+            di corse automobilistiche. Il primo capitolo è uscito
+            nel <strong>1994</strong> e, nel corso degli anni,
+            la serie è diventata molto popolare tra gli
+            appassionati di automobili e velocità.
+        </p>
+
+        <p>
+            Il gioco permette di guidare diverse auto sportive
+            e di partecipare a gare emozionanti. Una delle
+            caratteristiche più interessanti è la possibilità
+            di scegliere la propria automobile e modificarla
+            per renderla più veloce e originale.
+        </p>
+
+        <p>
+            Need for Speed è disponibile su diverse piattaforme,
+            come PlayStation, Xbox e PC. Alcuni capitoli sono
+            concentrati sulle gare in pista, mentre altri
+            permettono di esplorare liberamente la città
+            e partecipare a corse su strada.
+        </p>
+
+        <p>
+            Questa serie è conosciuta per la sua grafica,
+            le auto spettacolari e il senso di velocità
+            che riesce a trasmettere al giocatore.
+        </p>
+
+        <!-- COLLEGAMENTI ALLE ALTRE PAGINE -->
+
+        <div class="sezioni">
+
+            <article class="scheda">
+                <h3>02 — Automobili e gare</h3>
+
+                <p>
+                    Scopri le automobili sportive,
+                    le modifiche e le diverse modalità
+                    di gara presenti nella serie.
+                </p>
+
+                <a href="pagina2.html">
+                    Vai alla seconda pagina →
+                </a>
+            </article>
+
+            <article class="scheda">
+                <h3>03 — Il successo di NFS</h3>
+
+                <p>
+                    Scopri perché Need for Speed è così famoso
+                    e leggi la mia opinione su questo videogioco.
+                </p>
+
+                <a href="pagina3.html">
+                    Vai alla terza pagina →
+                </a>
+            </article>
+
+        </div>
+
+    </main>
+
+    <!-- PIEDE DEL SITO -->
+
+    <footer>
+        Need for Speed — Ricerca scolastica
+    </footer>
+
+</body>
+</html>
